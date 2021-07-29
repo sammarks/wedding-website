@@ -1,0 +1,61 @@
+:root {
+  --brown-0: #F8F2EE;
+  --brown-1: #F8F2EE;
+  --brown-2: #e6d9d3;
+  --brown-3: #A48570;
+  --brown-5: #927562;
+  --brown-6: #5f4431;
+  --brown-7: #39200F;
+
+  --size-xxs: 4px;
+  --size-xs: 8px;
+  --size-s: 16px;
+  --size-m: 22px;
+  --size-l: 32px;
+  --size-xl: 48px;
+  --size-xxl: 64px;
+
+  --font-size-small: calc(var(--size-s) - 4px);
+  --font-size-default: var(--size-s);
+  --font-size-large: calc(var(--size-s) + 4px);
+  --font-size-extra-large: calc(var(--size-s) + 14px);
+
+  --border-radius-base: 4px;
+  --border-radius-large: var(--size-s);
+
+  --text-color-secondary: var(--brown-3);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --size-xxs: 6px;
+    --size-xs: 12px;
+    --size-s: 24px;
+    --size-m: 32px;
+    --size-l: 48px;
+    --size-xl: 64px;
+    --size-xxl: 86px;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--brown-0);
+  font-family: 'Handlee', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 22px;
+  color: var(--brown-6);
+  line-height: 1.6;
+}
+
+h1, h2, h3, .header {
+  font-family: 'Great Vibes', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: var(--brown-7);
+}
+h1 { font-size: var(--size-xxl); }
+h2 { font-size: var(--size-xl); }
+h3 { font-size: var(--size-l); }
+
+a {
+  color: var(--brown-5);
+}
