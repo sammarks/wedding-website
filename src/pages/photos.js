@@ -9,7 +9,10 @@ import { media } from '../components/styled'
 
 const query = graphql`
   query PhotoGallery {
-    allFile(filter: {relativeDirectory: {eq: "photo-gallery"}}) {
+    allFile(
+      filter: {relativeDirectory: {eq: "photo-gallery"}}
+      sort: {fields: name, order: ASC}
+    ) {
       nodes {
         relativePath
         childImageSharp {
