@@ -4,6 +4,16 @@ import styled from '@emotion/styled'
 import { Button, Input } from '../components/styled'
 import { CheckCircledOutline, WarningCircledOutline } from 'iconoir-react'
 
+export function DummyForm() {
+  return (
+    <form method={'post'} netlify-honeypot={'testing'} data-netlify={'true'} name={'RSVP'} hidden>
+      <input type={'text'} name={'name'} />
+      <textarea name={'inParty'} />
+      <input type={'checkbox'} name={'acceptDecline'} />
+    </form>
+  )
+}
+
 export default function RSVP() {
   const [name, setName] = React.useState('')
   const [inParty, setInParty] = React.useState('')
@@ -79,6 +89,7 @@ export default function RSVP() {
                   name,
                   inParty,
                   acceptDecline,
+                  'form-name': 'RSVP',
                 }).toString()
               })
                 .then(() => {

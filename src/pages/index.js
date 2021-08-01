@@ -7,10 +7,12 @@ import { Separator } from '../components/Separator'
 import { Rings, ChurchAlt } from 'iconoir-react'
 
 import { Footer } from '../components/Footer'
+import { DummyForm } from './rsvp'
 
 export default function Index() {
   return (
     <IndexLayout>
+      <DummyForm />
       <SplashImageContainer>
         <StaticImage src={'../images/splash.jpg'} alt={'Merrick and Sam'} />
       </SplashImageContainer>
