@@ -68,7 +68,11 @@ const CRDescription = styled.div`
 
 const SplashImageContainer = styled.div`
   margin: var(--size-l) auto;
-  width: 100%;
-  border-radius: var(--border-radius-large);
-  overflow: hidden;
+  text-align: center;
+  img {
+    max-height: 90vh;
+    width: 100%;
+    border-radius: var(--border-radius-large);
+    overflow: hidden;
+  }
 `

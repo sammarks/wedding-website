@@ -3,7 +3,7 @@ module.exports = {
     siteUrl: "https://marks.wedding",
     title: 'Merrick and Sam',
     description: 'Join Merrick and Sam in their wedding celebration in Summer 2022.',
-    image: '',
+    image: '/images/social-image.jpg',
     titleTemplate: '%s - Merrick and Sam',
     keywords: 'merrick, melear, sam, samuel, marks, wedding'
   },
