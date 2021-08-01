@@ -71,8 +71,9 @@ const CRDescription = styled.div`
 const SplashImageContainer = styled.div`
   margin: var(--size-l) auto;
   text-align: center;
-  img {
+  > div {
     max-height: 90vh;
+    max-width: 600px;
     width: 100%;
     border-radius: var(--border-radius-large);
     overflow: hidden;
