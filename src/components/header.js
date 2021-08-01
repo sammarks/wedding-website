@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import { Separator } from './Separator'
+import { media } from './styled'
 
 export function Header() {
   return (
@@ -27,16 +28,21 @@ const HeaderContainer = styled.div`
   h1 { margin-bottom: 0; }
 `
 const ToGo = styled.div`
+  margin-top: var(--size-xs);
   font-size: var(--font-size-default);
   line-height: 1;
 `
 const NavigationContainer = styled.div`
   margin-top: var(--size-m);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  > :not(:last-child) {
-    margin-right: var(--size-m);
+  > * {
+    margin: calc(var(--size-xs) / 2) calc(var(--size-m) / 2);
+    ${media.lg} {
+      margin: 0 calc(var(--size-m) / 2);
+    }
   }
 `
 const NavigationItem = styled(Link)`

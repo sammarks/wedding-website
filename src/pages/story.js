@@ -1,8 +1,7 @@
 import React from 'react'
 import { IndexLayout } from '../layouts'
-import story from '../images/story.svg'
+import story from '../images/story.png'
 import styled from '@emotion/styled'
-import { Footer } from '../components/Footer'
 
 export default function Story() {
   return (

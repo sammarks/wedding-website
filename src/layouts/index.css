@@ -7,21 +7,22 @@
   --brown-6: #5f4431;
   --brown-7: #39200F;
 
-  --size-xxs: 4px;
+  --size-xxs: 6px;
   --size-xs: 8px;
-  --size-s: 16px;
+  --size-s: 20px;
   --size-m: 22px;
   --size-l: 32px;
   --size-xl: 48px;
   --size-xxl: 64px;
 
-  --font-size-small: calc(var(--size-s) - 4px);
+  --font-size-small: var(--size-s);
   --font-size-default: var(--size-s);
   --font-size-large: calc(var(--size-s) + 4px);
   --font-size-extra-large: calc(var(--size-s) + 14px);
 
   --border-radius-base: 4px;
   --border-radius-large: var(--size-s);
+  --border-color-base: #dacdc7;
 
   --text-color-secondary: var(--brown-3);
 }
@@ -35,6 +36,7 @@
     --size-l: 48px;
     --size-xl: 64px;
     --size-xxl: 86px;
+    --font-size-small: calc(var(--size-s) - 4px);
   }
 }
 

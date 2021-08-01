@@ -35,7 +35,7 @@ const Container = styled.div`
   > :not(:last-child) {
     margin-bottom: var(--size-l);
   }
-  ${media.md} {
+  ${media.lg} {
     flex-direction: row;
     align-items: stretch;
     justify-content: space-around;

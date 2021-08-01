@@ -7,7 +7,7 @@ import { Separator } from '../components/Separator'
 import { Rings, ChurchAlt } from 'iconoir-react'
 
 import { Footer } from '../components/Footer'
-import { DummyForm } from './rsvp'
+import { DummyForm } from '../components/DummyForm'
 
 export default function Index() {
   return (

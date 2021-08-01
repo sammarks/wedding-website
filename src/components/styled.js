@@ -19,9 +19,10 @@ export const media = breakpointKeys.reduce((acc, label) => {
 export const Button = styled.button`
   border: none;
   display: block;
-  padding: var(--size-xs) var(--size-s);
+  padding: var(--size-s) var(--size-s);
   color: var(--brown-6);
   background: var(--brown-2);
+  margin: 0;
   line-height: 1;
   border-radius: var(--border-radius-base);
   transition: color 0.25s linear, background 0.25s linear, opacity 0.25s linear;

@@ -4,16 +4,6 @@ import styled from '@emotion/styled'
 import { Button, Input } from '../components/styled'
 import { CheckCircledOutline, WarningCircledOutline } from 'iconoir-react'
 
-export function DummyForm() {
-  return (
-    <form method={'post'} netlify-honeypot={'testing'} data-netlify={'true'} name={'RSVP'} hidden>
-      <input type={'text'} name={'name'} />
-      <textarea name={'inParty'} />
-      <input type={'checkbox'} name={'acceptDecline'} />
-    </form>
-  )
-}
-
 export default function RSVP() {
   const [name, setName] = React.useState('')
   const [inParty, setInParty] = React.useState('')
@@ -34,7 +24,7 @@ export default function RSVP() {
       <>
         <LargeIconContainer><WarningCircledOutline /></LargeIconContainer>
         <h2>Our apologies.</h2>
-        <p>It looks like there was an issue submitting your RSVP. Please <a href={''} onClick={e => {
+        <p>It looks like there was an issue submitting your RSVP. Please <a href={'#'} onClick={e => {
           e.preventDefault()
           window.location.reload()
         }}>try again!</a></p>
@@ -153,5 +143,8 @@ const RadioButtonContainer = styled.div`
   button:last-child {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+  }
+  button:not(:last-child) {
+    border-bottom: solid 1px var(--border-color-base);
   }
 `
