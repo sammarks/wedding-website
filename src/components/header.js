@@ -16,7 +16,7 @@ export function Header() {
         <NavigationItem to={'/'} activeClassName={'active'}>Home</NavigationItem>
         <NavigationItem to={'/story'} activeClassName={'active'}>Story</NavigationItem>
         <NavigationItem to={'/photos'} activeClassName={'active'}>Photos</NavigationItem>
-        <RSVPItem to={'/rsvp'} activeClassName={'rsvp'}>RSVP</RSVPItem>
+        /* <RSVPItem to={'/rsvp'} activeClassName={'rsvp'}>RSVP</RSVPItem> */
       </NavigationContainer>
     </HeaderContainer>
   )
