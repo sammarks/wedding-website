@@ -6,6 +6,7 @@ import { IndexLayout } from '../layouts'
 import { Footer } from '../components/Footer'
 import { SwitchTransition, CSSTransition } from 'react-transition-group'
 import { media } from '../components/styled'
+import { NavArrowRight, NavArrowLeft } from 'iconoir-react'
 
 const query = graphql`
   query PhotoGallery {
@@ -73,6 +74,12 @@ export default function Photos() {
             <GatsbyImage image={mainImage} alt={''} />
           </CSSTransition>
         </SwitchTransition>
+        <ArrowContainer style={{ left: 20 }} onClick={() => setSelectedIndex(s => s === 0 ? images.length - 1 : s - 1)}>
+          <NavArrowLeft />
+        </ArrowContainer>
+        <ArrowContainer style={{ right: 20 }} onClick={() => setSelectedIndex(s => s === images.length - 1 ? 0 : s + 1)}>
+          <NavArrowRight />
+        </ArrowContainer>
       </MainImageContainer>
       <ThumbnailContainer>
         {images.map((image, index) => {
@@ -124,14 +131,36 @@ const ThumbnailItem = styled.div`
     }
   }
 `
+const ArrowContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--brown-3);
+  color: white;
+  font-size: var(--size-m);
+  width: var(--size-xl);
+  height: var(--size-xl);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.25s linear;
+  &:hover {
+    opacity: 1;
+  }
+`
 const MainImageContainer = styled.div`
   margin: var(--size-l) auto;
   width: 100%;
   overflow: hidden;
   text-align: center;
   cursor: pointer;
+  position: relative;
   img {
-    max-height: 800px;
+    height: 800px;
+    max-height: 90vh;
     border-radius: var(--border-radius-large);
     margin: 0 auto;
     display: block;
