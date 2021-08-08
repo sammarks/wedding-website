@@ -51,7 +51,7 @@ export default function Photos() {
   }, [])
   return (
     <IndexLayout title={'Photos'}>
-      <MainImageContainer ref={containerRef} onClick={() => setSelectedIndex(s => s === images.length - 1 ? 0 : s + 1)}>
+      <MainImageContainer ref={containerRef}>
         <SwitchTransition>
           <CSSTransition
             key={selectedIndex}
@@ -71,13 +71,25 @@ export default function Photos() {
             classNames={'fade'}
             appear
           >
-            <GatsbyImage image={mainImage} alt={''} />
+            <GatsbyImage image={mainImage} alt={''} onClick={() => setSelectedIndex(s => s === images.length - 1 ? 0 : s + 1)} />
           </CSSTransition>
         </SwitchTransition>
-        <ArrowContainer style={{ left: 20 }} onClick={() => setSelectedIndex(s => s === 0 ? images.length - 1 : s - 1)}>
+        <ArrowContainer
+          style={{ left: 20 }}
+          onClick={e => {
+            e.preventDefault()
+            setSelectedIndex(s => s === 0 ? images.length - 1 : s - 1)
+          }}
+        >
           <NavArrowLeft />
         </ArrowContainer>
-        <ArrowContainer style={{ right: 20 }} onClick={() => setSelectedIndex(s => s === images.length - 1 ? 0 : s + 1)}>
+        <ArrowContainer
+          style={{ right: 20 }}
+          onClick={e => {
+            e.preventDefault()
+            setSelectedIndex(s => s === images.length - 1 ? 0 : s + 1)
+          }}
+        >
           <NavArrowRight />
         </ArrowContainer>
       </MainImageContainer>
@@ -156,7 +168,6 @@ const MainImageContainer = styled.div`
   width: 100%;
   overflow: hidden;
   text-align: center;
-  cursor: pointer;
   position: relative;
   img {
     height: 800px;
@@ -164,6 +175,7 @@ const MainImageContainer = styled.div`
     border-radius: var(--border-radius-large);
     margin: 0 auto;
     display: block;
+    cursor: pointer;
   }
 
   .fade {
