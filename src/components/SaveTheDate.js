@@ -19,7 +19,7 @@ export function SaveTheDate() {
       <SaveItem>
         <SaveItemIcon><Map /></SaveItemIcon>
         <div>
-          <SaveItemMain>Lexington, KY</SaveItemMain>
+          <SaveItemMain>Lexington, Kentucky</SaveItemMain>
           <SaveItemSub>Location</SaveItemSub>
         </div>
       </SaveItem>

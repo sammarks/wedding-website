@@ -9,7 +9,7 @@ export function Header() {
     <HeaderContainer>
       <h1 style={{ lineHeight: 1.2 }}>Merrick &amp; Sam</h1>
       <ToGo>
-        June 18, 2022 &middot; Lexington, KY
+        June 18, 2022 &middot; Lexington, Kentucky
       </ToGo>
       <Separator />
       <NavigationContainer>

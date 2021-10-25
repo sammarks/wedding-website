@@ -25,7 +25,8 @@ export default function Index() {
       >
         <p>
           Central Christian Church<br />
-          219 East Short Street, Lexington, Kentucky
+          219 East Short Street<br />
+          Lexington, Kentucky 40507
         </p>
       </CeremonyReceptionItem>
       <CeremonyReceptionItem
@@ -35,7 +36,8 @@ export default function Index() {
       >
         <p>
           Central Christian Church<br />
-          Lexington, Kentucky
+          219 East Short Street<br />
+          Lexington, Kentucky 40507
         </p>
       </CeremonyReceptionItem>
       <Footer />
