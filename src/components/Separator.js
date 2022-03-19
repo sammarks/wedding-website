@@ -2,9 +2,9 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { Heart } from 'iconoir-react'
 
-export function Separator() {
+export function Separator({ style }) {
   return (
-    <Container>
+    <Container style={style}>
       <HeartContainer>
         <Heart />
       </HeartContainer>

@@ -26,6 +26,7 @@
     "gatsby-plugin-react-helmet": "^4.10.0",
     "gatsby-plugin-sharp": "^3.10.2",
     "gatsby-source-filesystem": "^3.10.0",
+    "gatsby-transformer-csv": "^4.10.0",
     "gatsby-transformer-sharp": "^3.10.0",
     "iconoir-react": "^2.1.0",
     "react": "^17.0.1",

@@ -18,7 +18,6 @@ export const media = breakpointKeys.reduce((acc, label) => {
 
 export const Button = styled.button`
   border: none;
-  display: block;
   padding: var(--size-s) var(--size-s);
   color: var(--brown-6);
   background: var(--brown-2);
@@ -30,6 +29,20 @@ export const Button = styled.button`
   cursor: pointer;
   opacity: 1;
   outline: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  span {
+    text-align: center;
+    flex: 1;
+    margin-left: calc(-1 * var(--size-m) + -1 * var(--size-s));
+  }
+  svg {
+    margin-right: auto;
+    padding-right: var(--size-s);
+    width: var(--size-m);
+    height: var(--size-m);
+  }
   &:not([disabled]) {
     &:hover, &:focus {
       text-decoration: underline;

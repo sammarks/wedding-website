@@ -45,7 +45,7 @@ export default function Index() {
   )
 }
 
-function CeremonyReceptionItem({ icon, title, description, children }) {
+export function CeremonyReceptionItem({ icon, title, description, children }) {
   return (
     <CRItemContainer>
       <CRIconContainer>{icon}</CRIconContainer>
