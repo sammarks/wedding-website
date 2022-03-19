@@ -42,7 +42,7 @@ export default function RSVP() {
   const [inParty, setInParty] = React.useState('')
   const [acceptDecline, setAcceptDecline] = React.useState(null)
   const [acceptDeclineBar, setAcceptDeclineBar] = React.useState(null)
-  const isValid = name.trim() && acceptDecline !== null
+  const isValid = name.trim() && acceptDecline !== null && (!matchingPerson.bar || acceptDeclineBar !== null)
   const [submitState, setSubmitState] = React.useState('working')
   let content
   if (submitState === 'submitted') {
