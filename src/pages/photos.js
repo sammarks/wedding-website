@@ -71,7 +71,13 @@ export default function Photos() {
             classNames={'fade'}
             appear
           >
-            <GatsbyImage image={mainImage} alt={''} onClick={() => setSelectedIndex(s => s === images.length - 1 ? 0 : s + 1)} />
+            <GatsbyImage
+              image={mainImage}
+              style={{ objectFit: 'contain' }}
+              imgStyle={{ objectFit: 'contain' }}
+              alt={''}
+              onClick={() => setSelectedIndex(s => s === images.length - 1 ? 0 : s + 1)}
+            />
           </CSSTransition>
         </SwitchTransition>
         <ArrowContainer
@@ -172,7 +178,6 @@ const MainImageContainer = styled.div`
   img {
     height: 800px;
     max-height: 90vh;
-    border-radius: var(--border-radius-large);
     margin: 0 auto;
     display: block;
     cursor: pointer;

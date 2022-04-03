@@ -1,10 +1,11 @@
 import React from 'react'
 import { IndexLayout } from '../layouts'
 import { StaticImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { SaveTheDate } from '../components/SaveTheDate'
 import { Separator } from '../components/Separator'
-import { Rings, ChurchAlt } from 'iconoir-react'
+import { Rings, ChurchAlt, Parking } from 'iconoir-react'
 
 import { Footer } from '../components/Footer'
 import { DummyForm } from '../components/DummyForm'
@@ -27,6 +28,11 @@ export default function Index() {
           Central Christian Church<br />
           205 East Short Street<br />
           Lexington, Kentucky 40507
+        </p>
+        <p>
+          <Link to={'/parking'} style={{ display: 'inline-flex', alignItems: 'center' }}>
+            <Parking width={'0.9em'} height={'0.9em'} style={{ marginRight: 5, marginBottom: 5 }} /> Parking Information
+          </Link>
         </p>
       </CeremonyReceptionItem>
       <CeremonyReceptionItem
