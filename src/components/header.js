@@ -17,7 +17,7 @@ export function Header() {
         <NavigationItem to={'/story'} activeClassName={'active'}>Story</NavigationItem>
         <NavigationItem to={'/photos'} activeClassName={'active'}>Photos</NavigationItem>
         <NavigationItem to={'/registry'} activeClassName={'active'}>Registry</NavigationItem>
-        {/* <RSVPItem to={'/rsvp'} activeClassName={'active'}>RSVP</RSVPItem> */}
+        <RSVPItem to={'/rsvp'} activeClassName={'active'}>RSVP</RSVPItem>
       </NavigationContainer>
     </HeaderContainer>
   )
